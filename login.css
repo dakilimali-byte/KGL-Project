@@ -1,0 +1,291 @@
+/* ================================================
+   KGL System Login - Custom Styles
+   ================================================ */
+
+/* CSS Variables for Custom Colors */
+:root {
+    --primary-color: #11d452;
+    --maize-yellow: #FFCB05;
+    --background-light: #f6f8f6;
+    --background-dark: #102216;
+    --kgl-deep-green: #0a4d1f;
+    --card-bg: #ffffff;
+    --card-bg-dark: #1a2e20;
+}
+
+/* Override Bootstrap Primary Color */
+.btn-primary,
+.text-primary {
+    --bs-primary: var(--primary-color) !important;
+    --bs-primary-rgb: 17, 212, 82 !important;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-light);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Image */
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.2;
+    pointer-events: none;
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZCxUny7pDeCICcvhhG48LsvolOWBJwYxmDmrr3RasJ2TtWH1myCt701p0JHO8g_qBgRml4dF9ZOWw9LZk0f47L-1hXae0LYNB0P6Y7U72RZBuueSbhj4NCXEBkorwXasvWRyNE7M9qD67bk792YwMkC0G5Y26pkdoW2FdHog3P060xZ22B1SrK5_vK-MiWO8I6AC7bTWiSEoaqgortfP7uOJ0E55rmk4xoxL3kI2SRHnyLiWh7Qm2OQHW3l0tnaceGF6TdYI07uc');
+    background-size: cover;
+    background-position: center;
+}
+
+.kgl-logo {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(246, 248, 246, 0.92);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Main Content */
+main {
+    position: relative;
+    z-index: 10;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Custom Text Colors */
+.text-deep-green {
+    color: var(--kgl-deep-green);
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.small-icon {
+    font-size: 1rem;
+}
+
+/* Form Controls */
+.form-control-custom,
+.form-select {
+    height: 48px;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    font-size: 1rem;
+    padding: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.form-control-custom:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(17, 212, 82, 0.15);
+    background-color: #ffffff;
+    outline: 0;
+}
+
+/* Select Arrow */
+.position-relative .select-arrow {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #9ca3af;
+    font-size: 1.5rem;
+}
+
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    padding-right: 2.5rem;
+}
+
+/* Button Styles */
+.btn-custom {
+    height: 48px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(17, 212, 82, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-custom:hover {
+    background-color: #0fc048;
+    transform: translateY(-1px);
+    box-shadow: 0 15px 20px -3px rgba(17, 212, 82, 0.3);
+}
+
+.btn-custom:active {
+    transform: translateY(0);
+}
+
+.btn-custom .material-symbols-outlined {
+    transition: transform 0.2s ease;
+}
+
+.btn-custom:hover .material-symbols-outlined {
+    transform: translateX(4px);
+}
+
+/* Form Labels */
+.form-label {
+    color: #374151;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+/* Links */
+a {
+    transition: color 0.2s ease;
+}
+
+a.text-primary:hover {
+    color: #0fc048 !important;
+}
+
+a.text-muted:hover {
+    color: #6b7280 !important;
+}
+
+/* Bottom Progress Bar */
+.progress-bar-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(17, 212, 82, 0.2);
+    z-index: 1000;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 33%;
+    background-color: var(--primary-color);
+}
+
+/* Dark Mode Support */
+[data-bs-theme="dark"] body {
+    background-color: var(--background-dark);
+}
+
+[data-bs-theme="dark"] body::before {
+    background-color: rgba(16, 34, 22, 0.95);
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: var(--card-bg-dark);
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .card-header {
+    background-color: var(--card-bg-dark);
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-bs-theme="dark"] .card-footer {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-bs-theme="dark"] .text-deep-green {
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .form-control-custom,
+[data-bs-theme="dark"] .form-select {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .form-control-custom:focus,
+[data-bs-theme="dark"] .form-select:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .form-control-custom::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+[data-bs-theme="dark"] .form-label {
+    color: #d1d5db;
+}
+
+[data-bs-theme="dark"] h1 {
+    color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .card {
+        margin: 1rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem !important;
+    }
+    
+    .card-header {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Border Warning Color Override */
+.border-warning {
+    border-color: var(--maize-yellow) !important;
+}
+
+/* Custom Spacing */
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.gap-3 {
+    gap: 1rem;
+}

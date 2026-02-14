@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karibu Groceries - System Admin & Settings</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link href="admin-settings-styles.css" rel="stylesheet" />
+  </head>
+  <body class="light-theme">
+    <!-- Main Application Container -->
+    <div class="admin-layout-container">
+      <!-- Left Sidebar Panel -->
+      <aside class="admin-sidebar">
+        <!-- Sidebar Header with Logo -->
+        <div class="sidebar-logo-section">
+          <div class="company-logo-circle">
+            <span class="material-symbols-outlined">eco</span>
+          </div>
+          <div class="company-name-box">
+            <h1 class="company-name">Karibu Groceries</h1>
+            <p class="panel-subtitle">System Admin Panel</p>
+          </div>
+        </div>
+
+        <!-- Sidebar Navigation Menu -->
+        <nav class="sidebar-nav-menu">
+          <a href="#" class="sidebar-nav-item">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Dashboard</span>
+          </a>
+          <a href="#" class="sidebar-nav-item active">
+            <span class="material-symbols-outlined filled-icon">settings</span>
+            <span>Settings</span>
+          </a>
+          <a href="#" class="sidebar-nav-item">
+            <span class="material-symbols-outlined">group</span>
+            <span>User Management</span>
+          </a>
+          <a href="#" class="sidebar-nav-item">
+            <span class="material-symbols-outlined">payments</span>
+            <span>Price Controls</span>
+          </a>
+          <a href="#" class="sidebar-nav-item">
+            <span class="material-symbols-outlined">list_alt</span>
+            <span>System Logs</span>
+          </a>
+          <a href="#" class="sidebar-nav-item">
+            <span class="material-symbols-outlined">notifications</span>
+            <span>Notifications</span>
+          </a>
+        </nav>
+
+        <!-- Sidebar Footer with User Profile -->
+        <div class="sidebar-footer-profile">
+          <div class="profile-user-card">
+            <div
+              class="profile-avatar-image"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuACs2b1NHMLWFRXBulhXHoACdZeYN79nF4b7qq06SstN4nQfxXHQAhbl8dMEDgzRUeIZe8nJ9hpAq-Vp3z100le-JgW_VykI4x2o6J01hQoqlqRtOi3oAeak8d_5iBPEwXtNsfkLi5DAT9tZ52kQujbeARY6J9ctTYIdWQrvrhVzTD6dAz59yzV6z27ZoJCcI1ce_fw5dT8HqSyFIxNdhBwbaN3VWxv9lqNj2O1loUPKUMcbs8LiC0nlLaWHJOYPujV1BPexEQ3TKQ&quot;);
+              "
+            ></div>
+            <div class="profile-user-info">
+              <p class="profile-user-name">James Mwangi</p>
+              <p class="profile-user-role">General Manager</p>
+            </div>
+            <span class="material-symbols-outlined logout-icon">logout</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="admin-main-content">
+        <!-- Top Navigation Header -->
+        <header class="admin-top-header">
+          <div class="header-left-section">
+            <h2 class="header-page-title">Admin Settings</h2>
+            <div class="header-divider"></div>
+            <div class="header-search-container">
+              <label class="search-input-wrapper">
+                <span class="material-symbols-outlined search-icon-position"
+                  >search</span
+                >
+                <input
+                  type="text"
+                  class="admin-search-input"
+                  placeholder="Search parameters..."
+                />
+              </label>
+            </div>
+          </div>
+          <div class="header-right-actions">
+            <button class="sync-system-button">
+              <span class="material-symbols-outlined">sync</span>
+              <span>Sync System</span>
+            </button>
+            <button class="help-icon-button">
+              <span class="material-symbols-outlined">help_outline</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Main Content Wrapper -->
+        <div class="admin-content-wrapper">
+          <!-- Breadcrumb Navigation -->
+          <div class="breadcrumb-trail">
+            <a href="#" class="breadcrumb-link-item">Karibu Groceries</a>
+            <span class="breadcrumb-slash">/</span>
+            <a href="#" class="breadcrumb-link-item">System Admin</a>
+            <span class="breadcrumb-slash">/</span>
+            <span class="breadcrumb-current-item">Settings</span>
+          </div>
+
+          <!-- Quick Statistics Cards -->
+          <div class="stats-cards-grid">
+            <!-- Active Users Card -->
+            <div class="stat-summary-card">
+              <div class="card-content-row">
+                <div class="card-stat-info">
+                  <p class="stat-card-label">Total Active Users</p>
+                  <p class="stat-card-value">42</p>
+                </div>
+                <div class="stat-icon-box primary-icon-box">
+                  <span class="material-symbols-outlined">group</span>
+                </div>
+              </div>
+              <p class="stat-card-footer positive-change">+3 since last week</p>
+            </div>
+
+            <!-- Pending Logs Card -->
+            <div class="stat-summary-card">
+              <div class="card-content-row">
+                <div class="card-stat-info">
+                  <p class="stat-card-label">Pending Logs</p>
+                  <p class="stat-card-value">128</p>
+                </div>
+                <div class="stat-icon-box yellow-icon-box">
+                  <span class="material-symbols-outlined">history</span>
+                </div>
+              </div>
+              <p class="stat-card-footer neutral-info">24 require review</p>
+            </div>
+
+            <!-- Last Price Update Card -->
+            <div class="stat-summary-card">
+              <div class="card-content-row">
+                <div class="card-stat-info">
+                  <p class="stat-card-label">Last Price Update</p>
+                  <p class="stat-card-value">2h ago</p>
+                </div>
+                <div class="stat-icon-box blue-icon-box">
+                  <span class="material-symbols-outlined">sell</span>
+                </div>
+              </div>
+              <p class="stat-card-footer neutral-info">By Admin: Mwangi J.</p>
+            </div>
+          </div>
+
+          <!-- Main Management Grid -->
+          <div class="management-sections-grid">
+            <!-- Global Price Adjustments Section -->
+            <section class="management-section">
+              <div class="section-header-row">
+                <h3 class="section-heading">Global Price Adjustments</h3>
+                <button class="view-history-link">
+                  <span class="material-symbols-outlined">history</span>
+                  <span>View History</span>
+                </button>
+              </div>
+              <div class="price-adjustment-card">
+                <!-- Grains Markup Slider -->
+                <div class="price-slider-group">
+                  <div class="slider-label-row">
+                    <label class="slider-label-text"
+                      >Grains & Cereals Markup</label
+                    >
+                    <span class="markup-badge positive-markup">+12%</span>
+                  </div>
+                  <input type="range" class="price-range-slider" value="60" />
+                </div>
+
+                <!-- Vegetables Slider -->
+                <div class="price-slider-group">
+                  <div class="slider-label-row">
+                    <label class="slider-label-text">Vegetables & Roots</label>
+                    <span class="markup-badge positive-markup">+5%</span>
+                  </div>
+                  <input type="range" class="price-range-slider" value="25" />
+                </div>
+
+                <!-- Fruits Slider -->
+                <div class="price-slider-group">
+                  <div class="slider-label-row">
+                    <label class="slider-label-text">Fruits & Seasonals</label>
+                    <span class="markup-badge negative-markup">-2%</span>
+                  </div>
+                  <input type="range" class="price-range-slider" value="40" />
+                </div>
+
+                <!-- Apply Button -->
+                <div class="apply-changes-section">
+                  <button class="apply-global-changes-button">
+                    Apply Global Changes
+                  </button>
+                  <p class="affected-products-note">
+                    Will affect 1,240 active products
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Notification Controls Section -->
+            <section class="management-section">
+              <div class="section-header-row">
+                <h3 class="section-heading">Notification Controls</h3>
+              </div>
+              <div class="notification-controls-card">
+                <!-- Toggle Items -->
+                <div class="notification-toggles-list">
+                  <!-- Low Stock Alerts Toggle -->
+                  <div class="notification-toggle-item">
+                    <div class="toggle-item-info">
+                      <span class="material-symbols-outlined toggle-icon"
+                        >inventory_2</span
+                      >
+                      <div class="toggle-text-content">
+                        <p class="toggle-title">Low Stock Alerts</p>
+                        <p class="toggle-description">
+                          Notify when items reach threshold
+                        </p>
+                      </div>
+                    </div>
+                    <div class="toggle-switch active-toggle">
+                      <div class="toggle-knob"></div>
+                    </div>
+                  </div>
+
+                  <!-- Daily Sales Report Toggle -->
+                  <div class="notification-toggle-item">
+                    <div class="toggle-item-info">
+                      <span class="material-symbols-outlined toggle-icon"
+                        >mail</span
+                      >
+                      <div class="toggle-text-content">
+                        <p class="toggle-title">Daily Sales Report</p>
+                        <p class="toggle-description">
+                          EOD summary to management
+                        </p>
+                      </div>
+                    </div>
+                    <div class="toggle-switch active-toggle">
+                      <div class="toggle-knob"></div>
+                    </div>
+                  </div>
+
+                  <!-- Security Breach Alerts Toggle -->
+                  <div class="notification-toggle-item">
+                    <div class="toggle-item-info">
+                      <span class="material-symbols-outlined toggle-icon"
+                        >priority_high</span
+                      >
+                      <div class="toggle-text-content">
+                        <p class="toggle-title">Security Breach Alerts</p>
+                        <p class="toggle-description">
+                          Immediate SMS for failed logins
+                        </p>
+                      </div>
+                    </div>
+                    <div class="toggle-switch inactive-toggle">
+                      <div class="toggle-knob"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Threshold Settings -->
+                <div class="threshold-settings-section">
+                  <div class="threshold-inputs-row">
+                    <div class="threshold-input-group">
+                      <label class="threshold-label">Stock Threshold</label>
+                      <input
+                        type="number"
+                        class="threshold-input-field"
+                        value="100"
+                      />
+                    </div>
+                    <div class="threshold-input-group">
+                      <label class="threshold-label">Units</label>
+                      <select class="threshold-select-field">
+                        <option>Bags (90kg)</option>
+                        <option>Kilograms</option>
+                        <option>Crates</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- User Management Table Section -->
+          <section class="users-table-section">
+            <div class="table-section-header">
+              <h3 class="section-heading">User Management</h3>
+              <div class="table-header-actions">
+                <button class="filter-users-button">
+                  <span class="material-symbols-outlined">filter_list</span>
+                  <span>Filter</span>
+                </button>
+                <button class="add-user-button">
+                  <span class="material-symbols-outlined">person_add</span>
+                  <span>Add New User</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="users-table-container">
+              <table class="users-management-table">
+                <thead class="table-head-section">
+                  <tr>
+                    <th class="table-column-header">User</th>
+                    <th class="table-column-header">Role</th>
+                    <th class="table-column-header">Last Login</th>
+                    <th class="table-column-header">Status</th>
+                    <th class="table-column-header text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="table-body-section">
+                  <!-- User Row 1 -->
+                  <tr class="user-table-row">
+                    <td class="table-data-cell">
+                      <div class="user-info-cell">
+                        <div class="user-avatar-initials">EK</div>
+                        <div class="user-details-text">
+                          <p class="user-full-name">Ezra Kiprop</p>
+                          <p class="user-email-address">ezra.k@karibu.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="table-data-cell">Warehouse Supervisor</td>
+                    <td class="table-data-cell muted-text">Today, 08:45 AM</td>
+                    <td class="table-data-cell">
+                      <span class="status-indicator active-status">
+                        <span class="status-dot"></span>
+                        Active
+                      </span>
+                    </td>
+                    <td class="table-data-cell text-end">
+                      <button class="table-action-button edit-action">
+                        <span class="material-symbols-outlined">edit</span>
+                      </button>
+                      <button class="table-action-button delete-action">
+                        <span class="material-symbols-outlined">delete</span>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <!-- User Row 2 -->
+                  <tr class="user-table-row">
+                    <td class="table-data-cell">
+                      <div class="user-info-cell">
+                        <div class="user-avatar-initials">SN</div>
+                        <div class="user-details-text">
+                          <p class="user-full-name">Sarah Njeri</p>
+                          <p class="user-email-address">sarah.n@karibu.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="table-data-cell">Sales Agent</td>
+                    <td class="table-data-cell muted-text">
+                      Yesterday, 04:12 PM
+                    </td>
+                    <td class="table-data-cell">
+                      <span class="status-indicator active-status">
+                        <span class="status-dot"></span>
+                        Active
+                      </span>
+                    </td>
+                    <td class="table-data-cell text-end">
+                      <button class="table-action-button edit-action">
+                        <span class="material-symbols-outlined">edit</span>
+                      </button>
+                      <button class="table-action-button delete-action">
+                        <span class="material-symbols-outlined">delete</span>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <!-- User Row 3 -->
+                  <tr class="user-table-row">
+                    <td class="table-data-cell">
+                      <div class="user-info-cell">
+                        <div class="user-avatar-initials">PO</div>
+                        <div class="user-details-text">
+                          <p class="user-full-name">Patrick Omondi</p>
+                          <p class="user-email-address">p.omondi@karibu.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="table-data-cell">Inventory Manager</td>
+                    <td class="table-data-cell muted-text">3 days ago</td>
+                    <td class="table-data-cell">
+                      <span class="status-indicator inactive-status">
+                        <span class="status-dot"></span>
+                        Inactive
+                      </span>
+                    </td>
+                    <td class="table-data-cell text-end">
+                      <button class="table-action-button edit-action">
+                        <span class="material-symbols-outlined">edit</span>
+                      </button>
+                      <button class="table-action-button delete-action">
+                        <span class="material-symbols-outlined">delete</span>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- Table Footer with Pagination -->
+              <div class="table-footer-pagination">
+                <p class="pagination-info-text">Showing 3 of 42 active users</p>
+                <div class="pagination-button-group">
+                  <button class="pagination-nav-button">Previous</button>
+                  <button class="pagination-page-button active-page">1</button>
+                  <button class="pagination-page-button">2</button>
+                  <button class="pagination-nav-button">Next</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- System Logs Section -->
+          <section class="system-logs-section">
+            <div class="logs-section-header">
+              <h3 class="section-heading">System Logs</h3>
+              <button class="download-audit-link">
+                Download Audit Log (.csv)
+              </button>
+            </div>
+
+            <div class="system-logs-container">
+              <div class="logs-list-wrapper">
+                <!-- Log Entry 1 - Info -->
+                <div class="log-entry-row">
+                  <span class="log-status-dot info-dot"></span>
+                  <span class="log-timestamp">2023-10-24 14:32</span>
+                  <span class="log-level-badge info-badge">INFO</span>
+                  <p class="log-message-text">
+                    User <span class="log-user-name">Mwangi J.</span> updated
+                    global markup for 'Grains' from 10% to 12%.
+                  </p>
+                  <span class="material-symbols-outlined log-expand-icon"
+                    >open_in_new</span
+                  >
+                </div>
+
+                <!-- Log Entry 2 - Error -->
+                <div class="log-entry-row error-log-row">
+                  <span class="log-status-dot error-dot"></span>
+                  <span class="log-timestamp">2023-10-24 13:10</span>
+                  <span class="log-level-badge error-badge">ERROR</span>
+                  <p class="log-message-text">
+                    Database connection failed during bulk inventory sync.
+                    <span class="retry-link">Retry sync?</span>
+                  </p>
+                  <span class="material-symbols-outlined log-expand-icon"
+                    >open_in_new</span
+                  >
+                </div>
+
+                <!-- Log Entry 3 - Warning -->
+                <div class="log-entry-row">
+                  <span class="log-status-dot warning-dot"></span>
+                  <span class="log-timestamp">2023-10-24 11:55</span>
+                  <span class="log-level-badge warning-badge">WARN</span>
+                  <p class="log-message-text">
+                    Inventory threshold reached for item 'White Maize (Grade
+                    1)'. Only 12 bags remaining.
+                  </p>
+                  <span class="material-symbols-outlined log-expand-icon"
+                    >open_in_new</span
+                  >
+                </div>
+
+                <!-- Log Entry 4 - Info -->
+                <div class="log-entry-row">
+                  <span class="log-status-dot info-dot"></span>
+                  <span class="log-timestamp">2023-10-24 09:22</span>
+                  <span class="log-level-badge info-badge">INFO</span>
+                  <p class="log-message-text">
+                    System automatic backup completed successfully. (Backup ID:
+                    BK-9942)
+                  </p>
+                  <span class="material-symbols-outlined log-expand-icon"
+                    >open_in_new</span
+                  >
+                </div>
+              </div>
+
+              <button class="view-all-logs-button">View All System Logs</button>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
